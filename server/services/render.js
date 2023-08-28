@@ -5,7 +5,12 @@ exports.homeRoutes = (req, res) => {
 }
 
 exports.loginpage = (req, res) => {
-    res.render("login", { success: '' });
+    // if (req.id) return res.redirect("/dashboard");
+    res.render("login", { status: '' });
+}
+
+exports.expired = (req, res) => {
+    res.render("expired");
 }
 
 exports.dashboardpage = (req, res) => {
@@ -21,7 +26,7 @@ exports.forgetRoutes = (req, res) => {
 }
 
 exports.designgallery = (req, res) => {
-    res.render('design');
+    res.render('design', { status: "" });
 }
 
 exports.manageorder = (req, res) => {
